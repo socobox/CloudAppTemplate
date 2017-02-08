@@ -1,0 +1,292 @@
+/*// ==========================================================================
+// Helper classes
+// ========================================================================== */
+
+
+/*A hack for HTML5 contenteditable attribute on mobile*/
+
+textarea[contenteditable] {
+    -webkit-appearance: none;
+}
+
+/*// A workaround for S60 3.x and 5.0 devices which do not animated gif images if
+// they have been set as display: none*/
+
+.gifhidden {
+    position: absolute;
+    left: -100%;
+}
+
+
+/* // * Image replacement*/
+ 
+
+.ir {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 0;
+  direction: ltr;
+  display: block;
+  overflow: hidden;
+  text-align: left;
+  text-indent: -999em;
+  br {
+    display: none;
+  }
+}
+
+.bold{font-weight:bold;}
+
+
+/* // * Hide from both screenreaders and browsers: h5bp.com/u*/
+ 
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.hidden-block {
+    display: none;
+}
+
+ /*// * Hide only visually, but have it available for screenreaders: h5bp.com/v*/
+ 
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+
+/* // * Extends the .visuallyhidden class to allow the element to be focusable
+ // * when navigated to via the keyboard: h5bp.com/p*/
+ 
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+
+/* // * Hide visually and from screenreaders, but maintain layout*/
+ 
+
+.invisible {
+    visibility: hidden;
+}
+
+
+/*//  * Clearfix helper
+//  * Used to contain floats: h5bp.com/q*/
+ 
+
+.cf:before,
+.cf:after {
+    content: "";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.display-block{
+  display: block;
+}
+.inline{
+  display:inline-block !important;
+}
+
+/* // * For IE 6/7 only
+ // * Include this rule to trigger hasLayout and contain floats.*/
+ 
+
+.cf {
+    *zoom: 1;
+}
+
+
+/* // * Clear 
+ // * Used also to contain floats*/
+ 
+.clear{clear:left;}
+
+
+/* // * FLoat Position helper
+ // * Used to floats elements*/
+ 
+.left{float:left !important;}
+.right{float:right !important;}
+.center{
+  float:none !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+
+/* // * Text align helper
+ // * Used to align text to a determined position*/
+ 
+.alignleft{text-align:left !important;}
+.alignright{text-align:right !important;}
+.aligncenter{text-align:center !important;}
+
+
+/*
+* Media helper
+* Used to contain article like layout
+*  ______    ____body_____
+* |      |   title
+* | img  |   lorem impus dolor sit amet
+* |______|
+*
+*/
+.media-content{
+  display:block;
+}
+
+.media-content__img{
+  float:left;
+  margin-right:10px;
+}
+
+.media-content__img.img_show{
+  border-radius: 50%;
+  height: 100px;
+  overflow: hidden;
+  width:100px;
+}
+
+.media-content__body{
+  overflow:hidden;
+  margin-bottom:0;
+}
+
+.media-content__body.body_show span{
+  display:block;
+  font-size: 12px;
+}
+
+.media-preview__img.img_preview{
+  text-align: center;
+  margin-bottom: 20px;
+  height:200px;
+  overflow: hidden;
+}
+
+.img_preview img{
+  max-width: 100%;
+  max-height: 100%;
+  width:auto;
+}
+
+/**
+ * Add/remove margins
+ */
+.push           { margin:       20px !important; }
+.push--top      { margin-top:   20px !important; }
+.push--top-80   { margin-top:   80px !important; }
+.push--80       { margin-bottom:80px !important; }
+.push--right    { margin-right: 20px !important; }
+.push--bottom   { margin-bottom:20px !important; }
+.push--left     { margin-left:  20px !important; }
+.push--ends     { margin-top:   20px !important; margin-bottom:20px !important; }
+.push--sides    { margin-right: 20px !important; margin-left:  20px !important; }
+
+.push-half          { margin:       10px !important; }
+.push-half--top     { margin-top:   10px !important; }
+.push-half--right   { margin-right: 10px !important; }
+.push-half--bottom  { margin-bottom:10px !important; }
+.push-half--left    { margin-left:  10px !important; }
+.push-half--ends    { margin-top:   10px !important; margin-bottom:10px !important; }
+.push-half--sides   { margin-right: 10px !important; margin-left:  10px !important; }
+
+.flush          { margin:       0!important; }
+.flush--top     { margin-top:   0!important; }
+.flush--right   { margin-right: 0!important; }
+.flush--bottom  { margin-bottom:0!important; }
+.flush--left    { margin-left:  0!important; }
+.flush--ends    { margin-top:   0!important; margin-bottom:0!important; }
+.flush--sides   { margin-right: 0!important; margin-left:  0!important; }
+
+
+/**
+ * Add/remove paddings
+ */
+.soft           { padding:       15px !important; }
+.soft--top      { padding-top:   15px !important; }
+.soft--right    { padding-right: 15px !important; }
+.soft--bottom   { padding-bottom:15px !important; }
+.soft--left     { padding-left:  15px !important; }
+.soft--ends     { padding-top:   15px !important; padding-bottom:15px !important; }
+.soft--sides    { padding-right: 15px !important; padding-left:  15px !important; }
+
+.soft-half           { padding:       10px !important; }
+.soft-half--top      { padding-top:   10px !important; }
+.soft-half--right    { padding-right: 10px !important; }
+.soft-half--bottom   { padding-bottom:10px !important; }
+.soft-half--left     { padding-left:  10px !important; }
+.soft-half--ends     { padding-top:   10px !important; padding-bottom:10px !important; }
+.soft-half--sides    { padding-right: 10px !important; padding-left:  10px !important; }
+
+.hard           { padding:       0!important; }
+.hard--top      { padding-top:   0!important; }
+.hard--right    { padding-right: 0!important; }
+.hard--bottom   { padding-bottom:0!important; }
+.hard--left     { padding-left:  0!important; }
+.hard--ends     { padding-top:   0!important; padding-bottom:0!important; }
+.hard--sides    { padding-right: 0!important; padding-left:  0!important; }
+
+.uppercase{text-transform: uppercase;}
+
+.overflow{overflow:hidden;}
+
+.clickable{cursor: pointer !important;}
+tr.clickable:hover,
+li.clickable:hover{background-color:#F0F0F0;}
+
+.no-gutter{padding:0 !important;}
+
+.no-gutter-top{padding-top:0 !important;}
+.no-gutter-bottom{padding-bottom:0 !important;}
+.no-gutter-right{padding-right:0 !important;}
+.no-gutter-left{padding-left:0 !important;}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.line-height--small {line-height: 1.5em;}
+.line-height--medium {line-height: 1.8em;}
+.line-height--long {line-height: 2em;}
+
+.no-border-radius {border-radius: 0 !important;}
+.no-border           { border:       0 !important; }
+.no-border--top      { border-top:   0 !important; }
+.no-border--bottom   { border-bottom:0 !important; }
+.no-border--right    { border-right: 0 !important; }
+.no-border--left     { border-left:  0 !important; }
+.no-border--ends     { border-top:   0 !important; border-bottom:0!important; }
+.no-border--sides    { border-right: 0 !important; border-left:  0!important; }
+
+.visual-debugger * {outline: 1px solid red;}
+.relative{position:relative;}
+.absolute{position:absolute;}
+
+
+.has-error > *{
+  border: solid red 1px;
+  padding: 15px 11px;
+}

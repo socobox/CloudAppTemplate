@@ -1,0 +1,23 @@
+<div ui-view="login">
+  <div class="login">
+    <form name="obj.loginForm" novalidate>
+      <div class="form text-center js-form">
+        <h1 class="login-logo">
+          <img src="" alt="SBX">
+        </h1>
+        <div class="fields" >
+          <div show-errors>
+            <input type="text" name="user" placeholder="Usuario" class="border" ng-model="obj.user" required>
+          </div>
+          <div show-errors>
+            <input type="password" name="password" placeholder="Contraseña" ng-model="obj.pass" required>
+          </div>
+        </div>
+        <button class="btn-simple" ng-click="obj.getUser()" ng-disabled="obj.isLoading">
+          <span ng-class="{'invisible':obj.isLoading}">INGRESAR</span>
+          <i class="fa fa-spinner fa-pulse" ng-show="obj.isLoading"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

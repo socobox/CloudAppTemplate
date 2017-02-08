@@ -1,0 +1,128 @@
+
+/*Body reset*/
+html,
+body{
+  background-color: #F6F6F6;
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  min-width: 100%;
+}
+
+
+html {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-font-smoothing: antialiased;
+  -webkit-appearance:none;
+}
+
+body {
+  font-size: 100%;
+  font-weight: 400;
+}
+
+/*Reset fonts for relevant elements*/
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+input,
+button,
+textarea{
+  background-color:transparent;
+  border:0 none;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
+
+/*input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea{border:0 none;}*/
+
+/*prevent chrome autocomplete yellow filling background*/
+input:-webkit-autofill{
+  background-color:transparent !important;
+  color: inherit;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input:focus, .form-control:focus {
+    box-shadow: none;
+    outline:none;
+}
+.form-control:focus {
+border:solid 1px #ccc;
+}
+
+textarea {
+    resize: none;
+}
+/*Links*/
+
+a {text-decoration: none;cursor:pointer;}
+a:hover,
+a:focus {text-decoration: none;}
+
+figure {
+  margin: 0;
+}
+
+
+/*Images*/
+img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+/*Horizontal rules*/
+
+hr {
+  border: 0;
+}
+b, strong{
+  font-weight: 600;
+}
+
+.checkbox input{-webkit-appearance:checkbox;}
+
+.alertify-logs div{font-size: 16px;}
+
+.app-container{
+  height:100%;
+  //for nav-bar use only
+  // padding-left:100px;
+  // padding-right:10px;
+}
+
+.main-wrapper{
+  min-height: 100%;
+}
+
+.main-wrapper:after{
+  content: "";
+  display: block;
+}
+
+.wrapper{
+  padding:0 12px;
+  margin:0 auto;
+  width:1000px;
+}
+
+.alertify .alert .msg, .alertify .dialog .msg{
+  font-size: 14px;
+}
+
